@@ -28,6 +28,12 @@ class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
                 $entry->isScheduledTask() ||
                 $entry->hasMonitoredTag();
         });
+
+        Telescope::tag(function (IncomingEntry $entry) {
+            return $entry->type === 'request'
+                ? ['status:' . $entry->content['response_status']]
+                : [];
+        });
     }
 
     /**

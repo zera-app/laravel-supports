@@ -123,4 +123,17 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /**
+     * Encryption key
+     */
+    'crypt' => [
+        'key' => env('APP_CRYPT_KEY'),
+    ],
+
+    /**
+     * Default Pagination Limit
+     */
+    'paginate' => [
+        'limit' => env('APP_PAGINATE_LIMIT', 10),
+    ],
 ];

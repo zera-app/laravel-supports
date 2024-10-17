@@ -20,23 +20,23 @@ class Number
     public static function load()
     {
         Blade::directive('formatCurrency', function ($expression) {
-            return "<?php echo \App\Supports\Str::formatCurrency($expression) ?>";
+            return "<?php echo \App\Supports\Number::formatCurrency($expression) ?>";
         });
         Blade::directive(
             'formatNumber',
             function ($expression) {
-                return "<?php echo \App\Supports\Str::formatNumber($expression) ?>";
+                return "<?php echo \App\Supports\Number::formatNumber($expression) ?>";
             }
         );
         Blade::directive('phoneNumber', function ($expression) {
             return
-                "<?php echo \App\Supports\Str::phoneNumber($expression) ?>";
+                "<?php echo \App\Supports\Number::phoneNumber($expression) ?>";
         });
         Blade::directive('toDecimal', function ($expression) {
-            return "<?php echo \App\Supports\Str::toDecimal($expression) ?>";
+            return "<?php echo \App\Supports\Number::toDecimal($expression) ?>";
         });
         Blade::directive('reversePhoneNumber', function ($expression) {
-            return "<?php echo \App\Supports\Str::reversePhoneNumber($expression) ?>";
+            return "<?php echo \App\Supports\Number::reversePhoneNumber($expression) ?>";
         });
     }
 }

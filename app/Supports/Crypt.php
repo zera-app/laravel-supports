@@ -12,7 +12,7 @@ final class Crypt extends Crypt
      */
     public function __construct()
     {
-        // 
+        //
     }
 
     /**

@@ -19,24 +19,26 @@ class Number
      */
     public static function load()
     {
-        Blade::directive('formatCurrency', function ($expression) {
-            return "<?php echo \App\Supports\Number::formatCurrency($expression) ?>";
+        Blade::directive('number', function ($expression) {
+            return "<?php echo \App\Supports\Number::format($expression) ?>";
         });
         Blade::directive(
-            'formatNumber',
-            function ($expression) {
-                return "<?php echo \App\Supports\Number::formatNumber($expression) ?>";
-            }
+            'formatCurrency',
+            function ($expression) { return "<?php echo \App\Supports\Number::formatCurrency($expression) ?>"; }
         );
-        Blade::directive('phoneNumber', function ($expression) {
+        Blade::directive('formatNumber', function ($expression) {
             return
-                "<?php echo \App\Supports\Number::phoneNumber($expression) ?>";
+            "<?php echo \App\Supports\Number::formatNumber($expression) ?>";
         });
-        Blade::directive('toDecimal', function ($expression) {
-            return "<?php echo \App\Supports\Number::toDecimal($expression) ?>";
-        });
+        Blade::directive('phoneNumber', function ($expression) { return "<?php echo \App\Supports\Number::phoneNumber($expression) ?>"; });
+        Blade::directive(
+            'toDecimal',
+            function ($expression) { return "<?php echo \App\Supports\Number::toDecimal($expression) ?>"; }
+        );
         Blade::directive('reversePhoneNumber', function ($expression) {
-            return "<?php echo \App\Supports\Number::reversePhoneNumber($expression) ?>";
+            return
+            "<?php echo \App\Supports\Number::reversePhoneNumber($expression) ?>";
         });
+        Blade::directive('summarizeNumber', function ($expression) { return "<?php echo \App\Supports\Number::forHumans($expression) ?>"; });
     }
 }

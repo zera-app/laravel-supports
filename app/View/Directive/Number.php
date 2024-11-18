@@ -24,21 +24,33 @@ class Number
         });
         Blade::directive(
             'formatCurrency',
-            function ($expression) { return "<?php echo \App\Supports\Number::formatCurrency($expression) ?>"; }
+            function ($expression) {
+                return "<?php echo \App\Supports\Number::formatCurrency($expression) ?>";
+            }
         );
         Blade::directive('formatNumber', function ($expression) {
             return
-            "<?php echo \App\Supports\Number::formatNumber($expression) ?>";
+                "<?php echo \App\Supports\Number::formatPhoneNumber($expression) ?>";
         });
-        Blade::directive('phoneNumber', function ($expression) { return "<?php echo \App\Supports\Number::phoneNumber($expression) ?>"; });
+        Blade::directive('toDecimal', function ($expression) {
+            return "<?php echo \App\Supports\Number::toDecimal($expression) ?>";
+        });
         Blade::directive(
-            'toDecimal',
-            function ($expression) { return "<?php echo \App\Supports\Number::toDecimal($expression) ?>"; }
+            'phoneNumber',
+            function ($expression) {
+                return "<?php echo \App\Supports\Number::phoneNumber($expression) ?>";
+            }
         );
-        Blade::directive('reversePhoneNumber', function ($expression) {
+        Blade::directive('toDecimal', function ($expression) {
             return
-            "<?php echo \App\Supports\Number::reversePhoneNumber($expression) ?>";
+                "<?php echo \App\Supports\Number::toDecimal($expression) ?>";
         });
-        Blade::directive('summarizeNumber', function ($expression) { return "<?php echo \App\Supports\Number::forHumans($expression) ?>"; });
+        Blade::directive('reversePhoneNumber', function ($expression) {
+            return "<?php echo \App\Supports\Number::reversePhoneNumber($expression) ?>";
+        });
+        Blade::directive('summarizeNumber', function ($expression) {
+            return
+                "<?php echo \App\Supports\Number::forHumans($expression) ?>";
+        });
     }
 }

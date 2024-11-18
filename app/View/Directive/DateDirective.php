@@ -37,17 +37,5 @@ class DateDirective
             return
                 "<?php echo \App\Supports\Carbon::parse($expression)->getDateTimeInformative() ?>";
         });
-        Blade::directive('getDateTimeWithTimezone', function ($expression, $timezone) {
-            return
-                "<?php echo \App\Supports\Carbon::parse($expression)->getDateTimeWithTimezone($timezone) ?>";
-        });
-        Blade::directive('getDateInformativeWithTimezone', function ($expression, $timezone) {
-            return
-                "<?php echo \App\Supports\Carbon::parse($expression)->getDateInformativeWithTimezone($timezone) ?>";
-        });
-        Blade::directive('getDateTimeInformativeWithTimezone', function ($expression, $timezone) {
-            return
-                "<?php echo \App\Supports\Carbon::parse($expression)->getDateTimeInformativeWithTimezone($timezone) ?>";
-        });
     }
 }

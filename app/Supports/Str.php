@@ -55,4 +55,21 @@ final class Str extends \Illuminate\Support\Str
     {
         return __($value, $replace, $locale);
     }
+
+    /**
+     * Twilio WhatsApp number.
+     */
+    public static function twilioWhatsappNumber(string $number): string
+    {
+
+        if (self::startsWith($number, 'whatsapp:')) {
+            return $number;
+        }
+
+        if (substr($number, 0, 1) === '+') {
+            $number = substr($number, 1);
+        }
+
+        return "whatsapp:{$number}";
+    }
 }

@@ -30,13 +30,14 @@ class Number
         );
         Blade::directive('phoneNumber', function ($expression) {
             return
-                "<?php echo \App\Supports\Number::phoneNumber($expression) ?>";
+                "<?php echo \App\Supports\Number::formatPhoneNumber($expression) ?>";
         });
         Blade::directive('toDecimal', function ($expression) {
             return "<?php echo \App\Supports\Number::toDecimal($expression) ?>";
         });
         Blade::directive('reversePhoneNumber', function ($expression) {
-            return "<?php echo \App\Supports\Number::reversePhoneNumber($expression) ?>";
+            return
+                "<?php echo \App\Supports\Number::reversePhoneNumber($expression) ?>";
         });
     }
 }

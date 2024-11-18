@@ -41,18 +41,16 @@ class Number
                 return "<?php echo \App\Supports\Number::phoneNumber($expression) ?>";
             }
         );
-        Blade::directive(
-            'toDecimal',
-            function ($expression) {
-                return "<?php echo \App\Supports\Number::toDecimal($expression) ?>";
-            }
-        );
-        Blade::directive('reversePhoneNumber', function ($expression) {
+        Blade::directive('toDecimal', function ($expression) {
             return
-                "<?php echo \App\Supports\Number::reversePhoneNumber($expression) ?>";
+                "<?php echo \App\Supports\Number::toDecimal($expression) ?>";
+        });
+        Blade::directive('reversePhoneNumber', function ($expression) {
+            return "<?php echo \App\Supports\Number::reversePhoneNumber($expression) ?>";
         });
         Blade::directive('summarizeNumber', function ($expression) {
-            return "<?php echo \App\Supports\Number::forHumans($expression) ?>";
+            return
+                "<?php echo \App\Supports\Number::forHumans($expression) ?>";
         });
     }
 }

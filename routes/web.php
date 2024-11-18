@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Test\BladeDirectiveController;
 use Illuminate\Support\Facades\Route;
 

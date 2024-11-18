@@ -4,7 +4,6 @@ namespace App\Services\Twilio;
 
 use App\Enums\Twilio\TemplateEnum;
 use App\Interface\Services\Twilio\InServiceInterface;
-use App\Supports\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -20,7 +19,7 @@ final class InService extends BaseService implements InServiceInterface
 
     /**
      * Handle the incoming request from twilio.
-     * 
+     *
      * @param Request $request
      * @return void
      */
@@ -65,9 +64,9 @@ final class InService extends BaseService implements InServiceInterface
 
     /**
      * Handle the callback from twilio.
-     * This function will be called when the message is status is changed, 
+     * This function will be called when the message is status is changed,
      * e.g. delivered, read, failed, etc.
-     * 
+     *
      * @param Request $request
      * @return void
      */

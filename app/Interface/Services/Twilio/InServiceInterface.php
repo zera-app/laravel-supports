@@ -8,7 +8,7 @@ interface InServiceInterface
 {
     /**
      * Handle the incoming request from twilio.
-     * 
+     *
      * @param Request $request
      * @return void
      */
@@ -16,9 +16,9 @@ interface InServiceInterface
 
     /**
      * Handle the callback from twilio.
-     * This function will be called when the message is status is changed, 
+     * This function will be called when the message is status is changed,
      * e.g. delivered, read, failed, etc.
-     * 
+     *
      * @param Request $request
      * @return void
      */

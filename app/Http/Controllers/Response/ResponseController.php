@@ -4,13 +4,12 @@ namespace App\Http\Controllers\Response;
 
 use App\Http\Controllers\Controller;
 use App\Supports\Str;
-use Illuminate\Http\Request;
 
 final class ResponseController extends Controller
 {
     /**
      * Handle response file.
-     * 
+     *
      * @param string $fileName
      */
     public function handle(string $fileName)

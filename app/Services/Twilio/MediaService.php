@@ -100,7 +100,7 @@ final class MediaService extends BaseService implements MediaServiceInterface
 
     /**
      * Create media message path.
-     * 
+     *
      * @param string $messageSid
      * @param string $mediaSid
      * @param string $mediaUrl
@@ -114,7 +114,7 @@ final class MediaService extends BaseService implements MediaServiceInterface
 
     /**
      * This will create a file and save it to storage.
-     * 
+     *
      * @param string $content
      * @param string $MIMEType
      * @return string
